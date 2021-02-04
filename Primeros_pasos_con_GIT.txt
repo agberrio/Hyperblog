@@ -15,3 +15,11 @@ $ git init
 dentro del directorio <oculto>
 
               L>  ".git" -->> donde encontramos la estructura interna de git
+
+Config Commands
+
+git config --> todas las configuraciones de git
+
+git config --list --> Muestra la confirguracion por defecto de git
+
+git config --list --show-origin --> donde estan guardadas las configuraciones
