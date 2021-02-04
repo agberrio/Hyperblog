@@ -1,0 +1,17 @@
+ARCHIVO DEMO
+
+primer archivo para realiar pruebas de operatividad y funciones en GIT
+
+Primero que todo GIT es un gestor de versiones, con el cual podremos desarrollar
+multipls cambios sin perdernos entre versiones y poder sacar un Master (definitivo)
+mas completo con todo lo mejor que hicimos o que deba llevar nuestro ARCHIVO
+o desarrollo.
+
+una vez tengamos instalado GIT en nuestro PC, solo debemos ubicarnos en la
+carpeta desde la cual trabajaremos y le damos el siguiente comando
+
+$ git init
+<git init> nos indica que hemos iniciado un repositorio en la carpeta actual
+dentro del directorio <oculto>
+
+              L>  ".git" -->> donde encontramos la estructura interna de git
