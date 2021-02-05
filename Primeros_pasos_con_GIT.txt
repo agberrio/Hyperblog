@@ -22,6 +22,8 @@ $ git status --> nos muestra el estado del repositorio dentro del directorio don
 $ git add . --> añadir al repositorio todo el contenido del directorio
 $ git add ["name"] --> añadir al repositorio por el nombre de archivo
 $ git commit  --> agregar cambios al repositorio
+              L>> nos lleva a VIM --> esc + I para insertar comentario y esc+shift+zz
+                forzar la salida y guardar el comentario del commit 
 $ git commit -m [mensaje_recordatorio de cambios]
 
 
@@ -32,3 +34,10 @@ git config --> todas las configuraciones de git
 git config --list --> Muestra la confirguracion por defecto de git
 
 git config --list --show-origin --> donde estan guardadas las configuraciones
+
+
+
+ANALISIS DE cambios
+
+$ git show [name] --> nos muestra los cambios sobre los ultimos commits que
+    realizamos a un archivo.
