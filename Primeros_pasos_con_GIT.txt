@@ -16,6 +16,15 @@ dentro del directorio <oculto>
 
               L>  ".git" -->> donde encontramos la estructura interna de git
 
+$ git status --> nos muestra el estado del repositorio dentro del directorio donde
+  ejecutamos git
+
+$ git add . --> añadir al repositorio todo el contenido del directorio
+$ git add ["name"] --> añadir al repositorio por el nombre de archivo
+$ git commit  --> agregar cambios al repositorio
+$ git commit -m [mensaje_recordatorio de cambios]
+
+
 Config Commands
 
 git config --> todas las configuraciones de git
