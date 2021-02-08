@@ -1,6 +1,6 @@
 ARCHIVO DEMO
 
-primer archivo para realiar pruebas de operatividad y funciones en GIT
+primer archivo para realizar pruebas de operatividad y funciones en GIT
 
 Primero que todo GIT es un gestor de versiones, con el cual podremos desarrollar
 multipls cambios sin perdernos entre versiones y poder sacar un Master (definitivo)
@@ -23,7 +23,7 @@ $ git add . --> añadir al repositorio todo el contenido del directorio
 $ git add ["name"] --> añadir al repositorio por el nombre de archivo
 $ git commit  --> agregar cambios al repositorio
               L>> nos lleva a VIM --> esc + I para insertar comentario y esc+shift+zz
-                forzar la salida y guardar el comentario del commit 
+                forzar la salida y guardar el comentario del commit
 $ git commit -m [mensaje_recordatorio de cambios]
 
 
@@ -35,9 +35,27 @@ git config --list --> Muestra la confirguracion por defecto de git
 
 git config --list --show-origin --> donde estan guardadas las configuraciones
 
+-----------------------
 
+ANALISIS DE CAMBIOS
 
-ANALISIS DE cambios
+-----------------------
 
 $ git show [name] --> nos muestra los cambios sobre los ultimos commits que
     realizamos a un archivo.
+
+
+$ git diff [#commit1] [#commit2]
+
+    L>> con este comando se pueden ver las diferencias entre dos versiones
+
+
+  ----------------------------------------------------------------------------
+  ****************************************************************************
+  ****************************************************************************
+  ----------------------------------------------------------------------------
+
+_______________________________________________________________________
+
+  RESET Y CHECKOUT ---->> VOLVER EN EL TIEMPO ---->> RESET Y CHECKOUT
+_______________________________________________________________________
