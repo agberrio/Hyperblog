@@ -49,6 +49,12 @@ $ git diff [#commit1] [#commit2]
 
     L>> con este comando se pueden ver las diferencias entre dos versiones
 
+$ git log --> nos permite ver el resumen de cambios del repositorio
+$ git log --stat  --> Permite ver los cambios especificos que se han realizado
+                      x archivo y contenido.
+
+
+
 
   ----------------------------------------------------------------------------
   ****************************************************************************
@@ -59,3 +65,34 @@ _______________________________________________________________________
 
   RESET Y CHECKOUT ---->> VOLVER EN EL TIEMPO ---->> RESET Y CHECKOUT
 _______________________________________________________________________
+
+RESET
+***WARNING*** PUEDES BORRAR TODOS TUS CAMBIOS... PIENSA BIEN ANTES DE USARLO
+
+$ git reset --> Nos permite volver a una versión anterior. para lo cual necesitamos
+                el numero de commit al cual queremos regresar. (git log para ver)
+
+$ git reset [#commit] --hard    ---> TODO VUELVE AL ESTADO ANTERIOR
+
+$ git reset [#commit] --soft    ---> Volvemos al estado anterior, pero el STAGING
+                                      se mantiene.
+
+CHECKOUT
+El checkout es una funcion que nos permite chequear versiones anteriores de un
+archivo del repositorio.
+***WARNING***
+      Si hacemos un "git status" nos va a mostrar que realizamos cambios en el
+      archivo, por lo cual si hicieramos un "git commit", borrariamos los cambios anteriores.
+
+
+$ git checkout [#commit] [archive_name]
+Nos permite chequear una version anterior de un archivo dentro del repositorio
+Si queremos que los cambios sobre la vrsion de rescate sean permanentes:
+$ git add .
+$ git commit -m "msj"
+De esta manera habremos rescatado una version anterior del archivo, realizado cambios
+sobre esa version y realizado un commit para agragarlo como master a nuestro repositorio
+
+
+$ git checkout master [archive_name]
+Para volver a nuestra ultima version sin perder los cambios.
