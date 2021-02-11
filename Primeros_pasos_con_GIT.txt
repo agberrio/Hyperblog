@@ -72,10 +72,14 @@ RESET
 $ git reset --> Nos permite volver a una versión anterior. para lo cual necesitamos
                 el numero de commit al cual queremos regresar. (git log para ver)
 
-$ git reset [#commit] --hard    ---> TODO VUELVE AL ESTADO ANTERIOR
+$ git reset [#commit] --hard    ---> TODO VUELVE AL ESTADO ANTERIOR, se borra la
+                                    info que se tenga en el staging
 
 $ git reset [#commit] --soft    ---> Volvemos al estado anterior, pero el STAGING
                                       se mantiene.
+
+$ git reset HEAD --> Este comando de reset es el mas benigno, porque nos ayuda a
+sacar del staging los archivos que no queremos incluir en el proximo commit.
 
 CHECKOUT
 El checkout es una funcion que nos permite chequear versiones anteriores de un
@@ -96,3 +100,20 @@ sobre esa version y realizado un commit para agragarlo como master a nuestro rep
 
 $ git checkout master [archive_name]
 Para volver a nuestra ultima version sin perder los cambios.
+
+
+
+
+GIT RM
+Este comando nos ayuda a eliminar archivos de git, sin eliminar su historial dentro
+del sistema de versiones. --> esto quiere decir que si necesitamos el archivo
+lo podremos recuperar volviendo al commit donde se encontraba antes de borrarlo.
+
+git rm usa flags (--)
+
+$ git rm --cached --> Elimina los archivos del area de Staging y del proximo commit
+pero los mantiene en el Disco.
+
+$ git rm --force --> Elimina los archivos de git y del disco. Git siempre guarda
+todo por lo que podremos recuperarlos entrando al registro de existencia de los
+archivos.
