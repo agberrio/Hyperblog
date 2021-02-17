@@ -54,6 +54,10 @@ $ git pull --> hace fetch y merge en un solo paso.
 
 ********************************************************************************
 ********************************************************************************
+$ git add {. o nombre del archivo}
+$ git commit -m
+$ git commit -a --> realiza un add y commit en un solo paso (msj en vim)
+$ git commit -am --> add, commit con mensaje en un solo paso.
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************
@@ -61,3 +65,16 @@ $ git pull --> hace fetch y merge en un solo paso.
 
 
 Introducción a Ramas o Branches.
+
+Para crear una nueva rama.
+
+>> $ git branch [branch_name]
+
+Para conmutar entre ramas:
+
+>> $ git checkout [branch_name]
+
+Para verificar en cual rama me encuentro
+git status
+git log
+git show
