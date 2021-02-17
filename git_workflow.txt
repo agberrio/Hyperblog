@@ -1,0 +1,63 @@
+Flujos de Trabajo locales y remotos con git.
+
+
+*** FLUJO DE TRABAJO BASICO CON REPOSITORIOS LOCALES ***
+
+Desde -->> DIRECTORIO PERSONAL
+            Cuando  -->>  $ git init <<--
+
+            Aparecen dos conceptos:
+
+            - PREPARACIÓN O STAGING --> si al contenido del directorio personal
+                                        le damos -->> $ git add <<--
+                                        hacemos un tracking de ese contenido
+                                        en el Staging. Este espacio es temporal
+                                        si no agregamos todos los cambios Para
+                                        ser rastreados este record pordra ser
+                                        borrado automaticamente.
+
+            - REPOSITORIO LOCAL --> con -->> $ git commit <<-- traemos esos cambios
+                                    rastreados al repositorio para ser almacenados
+                                    como una versión del control de cambios.
+
+
+***   ***   ***   ***   ***   ***   ***   ***
+
+*** FLUJO DE TRABAJO BASICO CON REPOSITORIOS REMOTOS ***
+
+
+Desde -->> un SERVIDOR REMOTO
+
+        --> CUANDO -->> $ git clone [url] <<--
+
+            1. trae una copia del Master al "directorio de trabajo local"
+
+            2. Crea la base de datos de todos los cambios de ese directorio
+               en el repositorio local.
+               dejando el Staging listo para rastrear nuevos ccambios y agregarle
+               nuevas versiones al contenido.
+
+$ git push -->> se envian los cambios de nuevo al servidor remoto
+
+$ git fetch --> traer una actualizaciónIntroducción a Ramas o Branches.
+ del repositorio, cundo se tienen
+                cambios realizados en el repositorio que se deben sincronizar
+                en el flujo de versiones.
+
+$ git merge --> sincroniza los cambios actiualizados en el repositorio con el
+              directorio local.
+
+$ git pull --> hace fetch y merge en un solo paso.
+
+
+
+
+********************************************************************************
+********************************************************************************
+********************************************************************************
+********************************************************************************
+********************************************************************************
+
+
+
+Introducción a Ramas o Branches.
