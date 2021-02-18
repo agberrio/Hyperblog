@@ -78,3 +78,12 @@ Para verificar en cual rama me encuentro
 git status
 git log
 git show
+
+Para ver que ramas tengo disponibles
+$ git branch
+
+Para hacer un merge de una rama a otra.
+*WARNING* El merge se debe invocar desde la rama a la cual se le van a gregar los
+cambios de la otra.
+
+$ git merge [branch_name]
