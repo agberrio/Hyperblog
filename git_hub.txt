@@ -12,4 +12,24 @@ $ git remote
     fetch: traer de un repo remoto / origen
     push: enviar al repo remoto / origen
 
+    git origin --help
+    NOTA: EL FLAG --help NOS PERMITE ACCEDER A LA AYUDA DE UN COMANDO EN GIT.
+
+    ---------------------------
+
+    Para fusionar un repositorio remoto con uno local.
+
+    $ git push [nombre del remoto] [rama local que se envia: ej main]
+    $ git push origen main
+
+    pueden salir warnings en caso de que sea la primera vez que se combinan o que los contenidos
+    no coincidan.
+
+    Warning: no common commits
+    fatal: refusing to merge unrelated histories
+
+    para darle solucion:
+    $ git pull [remote name] [brnach name] --allow-unrelated-histories
+
+    $ git pull origen main --allow-unrelated-histories 
     
