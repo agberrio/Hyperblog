@@ -1,2 +1,5 @@
 GIT HUB
 
+Agregar un origen Remoto en GIT (ojo en GIT, no en GITHUB!)
+
+$ git remote add origin [https del repositorio]
