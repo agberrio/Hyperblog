@@ -2,4 +2,14 @@ GIT HUB
 
 Agregar un origen Remoto en GIT (ojo en GIT, no en GITHUB!)
 
-$ git remote add origin [https del repositorio]
+$ git remote add [nombre del origen] [https del repositorio]
+
+$ git remote
+    --> nos muestra los origenes remotos en nuestro repositorio.
+
+@ git remote -v
+    --> nos muestra los origenes de manera verbal (fetch y push)
+    fetch: traer de un repo remoto / origen
+    push: enviar al repo remoto / origen
+
+    
