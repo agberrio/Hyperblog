@@ -22,6 +22,8 @@ $ git remote
     $ git push [nombre del remoto] [rama local que se envia: ej main]
     $ git push origen main
 
+    
+
     pueden salir warnings en caso de que sea la primera vez que se combinan o que los contenidos
     no coincidan.
 
