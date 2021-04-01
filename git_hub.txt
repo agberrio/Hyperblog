@@ -30,31 +30,95 @@ $ git remote
     fatal: refusing to merge unrelated histories
 
     para darle solucion:
-    $ git pull [remote name] [brnach name] --allow-unrelated-histories
+    $ git pull [remote name] [branch name] --allow-unrelated-histories
 
     $ git pull origen main --allow-unrelated-histories 
+    
+    
+    *** LLAVES PUBLICAS Y PRIVADAS  ***
+    ***********************************
+    
+    Las llaves publicas y privadas nos ayudan a cifrar y descifrar información privada que queremos compartir pero que no queremos que caiga en manos equivocadas.
+    
+    ¿Cómo se hace?
+        1. Ambas personas (ambos extremos) deben crear sus llaves (una pública y otra privada)
+        2. Ambos extremos deben compartir su llave pública con el otro extremo. (no hay problema si por error alguien intercepta nuestra llave publica)
+        3. La persona (extremo) que quiere compartir un mensaje o información, puede usar la llave pública de la otra persona para cifrar la información y de esta manera asegurarse que solo pueda ser descifrada la información con la llave privada del otro extremo.
+        4. El mensaje o información queda cifrado y se puede compartir con la otra persona (extremo) sin preocupación de que este sea interceptado.
+        5. EL otro extremo usará su llave privada para descifrar el mensaje o información.
+        
+***WARRING**** podremos compartir nuestra llave PUBLICA, pero NUNCA! nuestra llave privada.
+
+
 
 
 ---------------------   --------------------    -------------------
 
     Acceso a gihub por medio de llaves ssh.
 ---------------------   --------------------    -------------------
+CONFIGURANDO TUS LLAVES SSH EN LOCAL.
+--------------------------------------
 
-$ git config -l
-    --> lista de los parametros configurados
+                                                                            configuraciones preliminares:
+                                                                            $ git config -l
+                                                                                       --> lista de los parametros configurados
 
-$ git config --global user.email "correo@configurar.aca"
+                                                                            $ git config --global user.email "correo@configurar.aca"
+
+
+
+PRIMER PASO.
+------------
+    Generar tus llaves SSH:Secure Shell      ***"es buena idea proteger nuestra llave privada con una contraseña"***
 
 
 <<< Para Generar una Llave Publica y Privada >>>
 
 $ ssh-keygen -t rsa -b 4096 -C "d6rkmatterz@gmail.com"
 
-$ ssh-keygen -->>
+$ ssh-keygen -->> Generar Llave Secure Shell
 
--t rsa -->
+-t rsa --> especifica cual es el algoritmo que se va a usar, en este caso el algoritmo "rsa"
 
--b 4096 -->
+-b 4096 --> Especifica la complejidad de la llave desde una perspectiva matematica --> 4096
 
--C "d6rkmatterz@gmail.com" -->
+-C "d6rkmatterz@gmail.com" --> Conectar la llave al correo especificado.
+
+
+
+Una vez damos "Enter" a nuestro comando $ ssh-keygen -t rsa -b 4096 -C "d6rkmatterz@gmail.com" debemos especificar al sistema que ubicación queremos para nuestras llaves.
+
+una vez especificamos esto, se nos pedirá un passphrase para nuestra llave privada.
+
+posteriormente podremos ver en la ubicación que especificamos dos archivos. 
+1. id_rsa --> nuestra llave privada
+2. id_rsa.pub --> nuestra llave publica.
+
+SEGUNDO PASO.
+-------------
+    Terminar de configurar las llaves en nuestro sistema.
+Ahora una ves tenemos nuestra llave, tendremos que agregarla al entorno.
+    --> es decir: Que el sistema operativo sepa que tu llave existe.
     
+1. Revisar que el servidor de llaves este prendido.
+#encender el servidor de llaves SSH en Win y Linux
+$ eval $(ssh-agent -s)
+
+--> la terminal nos debera dar como respuesta algo asi: agent pid ###---> un valor
+    agent --> quiere decir que el sevidor de llaves esta funcionando
+    pid --> process id -- la identificación del proceso
+    ### --> es un valor que identifica al proceso que esta ejecutandose.
+    
+2. Ahora debemos agregar nuestra llave a este servidor de llaves ssh.
+
+$ ssh-add (ruta donde quedó guardada la llave privada y su nombre): ej ~/.ssh/llave_rsa
+$ ssh-add ~/.ssh/llave_rsa (si configuraste passphrase te lo pedirá)
+
+
+-------EN--------MAC-------------
+El proceso de creación de llaves es exactamente igual, lo que cambia es la configuración de nuestras llaves en el sitema mac os, 
+
+Para arrancar el servidor SSH:
+
+$ eval "$(ssh-agent -s)"
+dara el mismo resultado: agent pid ####
