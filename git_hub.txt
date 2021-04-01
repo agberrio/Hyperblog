@@ -24,8 +24,7 @@ $ git remote
 
     
 
-    pueden salir warnings en caso de que sea la primera vez que se combinan o que los contenidos
-    no coincidan.
+    pueden salir warnings en caso de que sea la primera vez que se combinan o que los contenidos no coincidan.
 
     Warning: no common commits
     fatal: refusing to merge unrelated histories
@@ -34,4 +33,28 @@ $ git remote
     $ git pull [remote name] [brnach name] --allow-unrelated-histories
 
     $ git pull origen main --allow-unrelated-histories 
+
+
+---------------------   --------------------    -------------------
+
+    Acceso a gihub por medio de llaves ssh.
+---------------------   --------------------    -------------------
+
+$ git config -l
+    --> lista de los parametros configurados
+
+$ git config --global user.email "correo@configurar.aca"
+
+
+<<< Para Generar una Llave Publica y Privada >>>
+
+$ ssh-keygen -t rsa -b 4096 -C "d6rkmatterz@gmail.com"
+
+$ ssh-keygen -->>
+
+-t rsa -->
+
+-b 4096 -->
+
+-C "d6rkmatterz@gmail.com" -->
     
