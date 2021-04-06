@@ -100,7 +100,7 @@ SEGUNDO PASO.
 Ahora una ves tenemos nuestra llave, tendremos que agregarla al entorno.
     --> es decir: Que el sistema operativo sepa que tu llave existe.
     
-1. Revisar que el servidor de llaves este prendido.
+1. Revisar que el servidor de llaves este encendido.
 #encender el servidor de llaves SSH en Win y Linux
 $ eval $(ssh-agent -s)
 
@@ -118,7 +118,40 @@ $ ssh-add ~/.ssh/llave_rsa (si configuraste passphrase te lo pedirá)
 -------EN--------MAC-------------
 El proceso de creación de llaves es exactamente igual, lo que cambia es la configuración de nuestras llaves en el sitema mac os, 
 
-Para arrancar el servidor SSH:
+Para arrancar el servidor SSH en MAC:
 
 $ eval "$(ssh-agent -s)"
 dara el mismo resultado: agent pid ####
+
+Para Mac OS 20.12 o superior se debe realizar una modificación sobre un archivo de configuración.
+--------------------------- ----------------------------    ------------------- -------------------
+Desde la carpeta donde se crearon las llaves ssh, ejecutar
+
+$ vim config
+o
+$ code config
+
+dependiendo del editor de texto que se maneje, atom, etc
+a este archivo "config" se le agrega:
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Ahora si se agrega la llave privada
+
+$ ssh-add -K ~/.ssh/id_rsa
+
+
+
+
+
+*****************************   ******************************* ******************************  **************************
+
+-------------------------
+CONEXION A GITHUB CON SSH
+-------------------------
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5+7Ya0o/9UgcaIa1VRXx12JN1rUbCpe4oEm7n+436yg0vV7d+qmCcRhMGjWLGJ0EDFOCcE6/bv9E4yOfMZtFISqWraoDcl53jrMeB0umKcL0m65AqjhHxqjAq9vvsIOX8BCrRxgeRxpg7nu+nvhG5pgCAvr7SRZlTDHplH1lqF5iKcBsY/EFVzN7o6BshlFLPlBeGbLqicLXXTo4VdUKNP2oUWMx/+PBhKrUkw/ZXQj7IRUVyGnBqhseiwXQz8mGB1o1FkxO/GkspVfPocIeLrztQUJkgs02grEWJ8hwZnGoQWCWBlvhB01S+tFr27k7uHgxbH1gCPLa3qSE7w3/DkbLVCMtFcM4QUFQWFtlRc5Hu4m0zaDbRqlzsWy4J5LIDH19mYF6eG0jRPofH8HFSQNC494DIMAGAFfQSeIvucjOJZx1Sgue/mlGtPnAThbQFKjT8cjPOnOHuuLYpmewEWE786bl3BPpfckpP2T03GxOQxHntGEBtTBGaFDvhOHCIvw4I5UIgCiwP4r6K9ZsaUaT2CWk/BuRmoxeJ/jkLjCTu1w23/W5yQhQYeSbmjthndyFCmncC8mOsGmfuy2Ns40Y55L06/CIReq04zbZ7YAc4F+VbDwJjduF6gsIady+YhmWPRl7fACtfbMmXaXlCHxST7EmbdbfU0vBIyMVsSw== d6rkmatterz@gmail.com
+
