@@ -178,3 +178,50 @@ Para cambiar la url del repositorio: En github en el repositorio a conectar busc
 
 $ git remote set-url origin (pegamos aca la dirección ssh de github)
 
+
+
+        --------------------------------
+        TAGS Y VERSIONES EN GIT Y GITHUB
+        --------------------------------
+  
+CREAR ALIAS:> para acortar instrucciones por una palabra "alias" 
+
+$ git log --all --graph --decorate --oneline 
+   |
+    --> Nos permite ver de una manera gráfica la historia de commits de nuestro repositorio.
+       l> Lo importante de esto es que nos muestra los # de cada commit, para poder hacer nuestros tags posteriormente.
+    
+        Como es un comando tan largo y dificil de recordar, vamos a usar una función de la terminal que se llaman "alias" de tal manera que podamos invocar nuestro comando de git solo ejecutando una palabra "alias" que vamos a elegir para recordarla. el nombre seria "arbol"
+
+$ alias arbol="git log --all --graph --decorate --oneline"
+
+$ arbol
+    l>> será lo mismo que ejecutar --> $ git log --all --graph --decorate --oneline 
+
+
+CREAR TAGS: (git tag)
+            Los tags o etiquetas nos permiten asignar versiones a los commits con cambios importantes o significativos a nuestros proyectos.
+
+    Comandos para trabajar etiquetas:
+    
+    l> $ git tag -a v0.1 -m "mensaje de la versión" #commit#
+        l> git tag --> crear una etiqueta
+        l> -a --> agregar tag con la v0.1
+        l> -m "" --> con el mensaje de la version
+        l> el hash del commit que queremos marcar
+
+    l> $ git show-ref --tags 
+        l> para saber a que hash/commit esta conectado un tag. --> listar los tags de nuestro repositorio local
+        
+    l> $ git tag -d nombre_del_tag
+        l> borrar un tag de nuestro repositorio local
+        
+    l> $ git push origen --tags
+        l> publicar un tag en nuestro repositorio remoto
+        
+    l> $ git tag -d tag_name
+        y
+    l> $ git push origen :refs/tags/tag_name
+        
+    
+
