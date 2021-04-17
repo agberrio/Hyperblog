@@ -225,3 +225,28 @@ CREAR TAGS: (git tag)
         
     
 
+
+
+        --------------------------------
+            MANEJO DE RAMAS EN GITHUB
+        --------------------------------
+        
+ { RECORDATORIO: EN GIT l>  $ git branch --> para ver las ramas que contiene nuestro repositorio.
+                        l>  $ git branch new_branch_name --> nombrar y crear una nueva rama.
+                        l>  $ git checkout -b new_branch_name --> nombrar, crear y conmutar a una nueva rama.
+                        l>  $ git brnach -m new_name --> cambiar el nombre de la rama recien creada.
+                        l>  $ git checkout branch_name --> para cambiar a una de las ramas que tenemos en nuestro repositorio local.
+                        l>  $ git show-branch --> Nos muestra cuales son las ramas que existen y cual ha sido su historia.
+                        l>  $ git show-branch --all --> amplia la información de show-branch (ramas locales y remotas y el ultimo commit en cada rama).
+                        l>  $ gitk --> abre un software (gitk) la visual de las ramas y su historia. Entorno grafico del flujo de trabajo con Git.
+                        l>  $ git push origen branch_name --> enviar una rama del repositorio local al repositorio remoto (GitHub).
+                            }
+                        
+                        l>  $ git clone https://... --> clonar un repositorio remoto en mi pc
+                           
+                           
+                           
+ 
+ 
+ 
+ 
