@@ -48,3 +48,16 @@ Una vez se tienen listos los cambios en cada rama, solo nos queda hacer el merge
         l> $ git merge --abort
         
   
+
+
+
+-----------------
+PULL REQUESTS
+-----------------
+
+En un entorno profesinal de desarrollo normalmente la rama Master o Main siempre está bloqueada, ya que de esta salen las versiones definitivas que se van a publicar. 
+para llegar a esta rama principal primero las versiones pasan por un CODE REVIEW y luego se unen los códigos con un MERGE REQUEST.
+
+Las pruebas (Code Review) de este codigo se realizan en unos servidores a los cuales se les llama STAGING DEVELOP (servidores de pruebas), donde se evaluan los cambios con el codigo y la aplicación y una vez son aprobados pasan al servidor de producción con el MERGE REQUEST.
+
+Antes de que el codigo pase a CODE REVIEW (Staging Develop) se debe hacer un PULL REQUEST, una vez estos PR son aprobados por los auditores del proyecto, las ramas con el nuevo código harán merge en los Staging Develop para hacer el Code Review. una vez estos son aprobados pasan a Merge Request para entrar a la rama Master
