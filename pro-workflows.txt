@@ -1,0 +1,50 @@
+------------------------------------------------------------
+*** MERGE CON RAMAS DE DESARROLLO DE OTROS COLABORADORES ***
+------------------------------------------------------------
+
+
+Por defecto, cualquier persona puede clonar nuestros repositorios de GitHub, excepto realizar commits, ni ramas etc de nuevo al repositorio remoto.
+
+Una de las varias formas de aceptar contribuciones es permitir el acceso a colaboradores a nuestro proyecto (añadir a cada persona de nuestro eequipo de desarrollo = colaboradores)
+
+Solo debemos entrar a la configuración de colaboradores de nuestro proyecto:
+
+*** (Repositorio > Settings > Collaborators) **** 
+
+añadir el email o username de los nuevos colaboradores.
+
+A nuestros colaboradores les llegara un correo con la invitación la cual deberan aceptar. una vez la acepten sus aportes serán admitidos en el proyecto remoto de GitHub
+
+
+Las invitaciones se hacen ya sea al correo de nuestro colaborador si esta configurado como publico o al usuario que tiene ese usuario dentro de GitHub.
+
+
+
+LOS APORTES DE CADA COLABORADOR DEBERIAN ESTAR SEPARADOS POR RAMAS... ESA ES LA MANERA MAS EFECTIVA DE EVITAR CONFLICTOS CON LA INFORMACIÓN Y QUE SE PIERDAN DATOS IMPORTANTES PORQUE ALGUIEN MODIFICO UN CAMBIO EN LARAMA QUE TRABAJA OTRA PERSONA.
+
+***BUENAS PRACTICAS***
+Los archivos binarios no se deben alojar en los repositorios
+1. por el tamaño que tienen
+2. porque github no puede actualizar constantemente su contenido cada vez que se modifican, se crea un mapa del bianrio pero este no se modifica constantemente.
+
+Sobre el MASTER o MAIN no se debe trabajar. se debe trabajar en ramas y al master solo se envia la información que esta lista para producción, lanzamiento.
+en MASTER/MAIN solo se compilan versiones definitivas de todas las ramas.
+
+
+Nota: El estandar de tildes de Mac y el estandar de tildes de Windows o Linux es distinto; se conoce como el conflicto de Unicode o UTF-8
+
+Una vez se tienen listos los cambios en cada rama, solo nos queda hacer el merge para dejar en nuestra rama maestra los cambios definitivos del proyecto. para lo cual:
+
+  l> Nos ubicamos en la Rama principal/maestra
+    l> $ git checkout main --> o master si es el caso.
+    l> $ git pull origin main --> para traer los ultimos cambios de esta rama
+  
+  l> Hacemos el merge con la pirmera rama que queremos traer a nuestro HEAD MASTER.
+    l> $ git merge header
+      ::si no hay conflictos, todo deberia salir bien::
+      :: Si se presentan conflictos se deben seleccionar los conflictos y resolverlos manualmente, puede que haya codigo sobreponiendose al otro por lo cual git no puede tomar decisiones. ::
+      
+      l> si por alguna razon queemos cancelar el merge
+        l> $ git merge --abort
+        
+  
