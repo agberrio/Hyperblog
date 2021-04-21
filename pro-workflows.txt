@@ -71,3 +71,38 @@ Sobre estos PR se puede solicitar la revisión de algún auditor que evalue (rev
 Asi como tambien se podrá mantener un dialogo alrededor de este PR para alcanzar la maxima calidad de los cambios antes del merge.
 
 
+--------------------------------------------------------
+FORKS / BIFURCACIONES Y COMO CONTRIBUIR A UN REPOSITORIO
+--------------------------------------------------------
+
+
+Cuando no se tiene el permiso para ser CONTRIBUTOR / COLABORADOR en un proyecto, no podremos participar activamente sobre las ramas ya que no tenemos asignaciones por parte de los dueños del proyecto.
+
+En este caso, con proyectos publicos y de codigo abierto podremos ver los repositorios de estos proyectos y aunque no podremos participar directamente, podremos crear una bifurcación del flujo de trabajo del proyecto original hacia nuestro repositorio en el cual podremos descargar este repositorio y trabajar sobre todas sus ramas pero en una "realidad alterna" de desarrollo. Hacer un Fork es como trabajar en un universo paralelo de un proyecto para llevar mejoras posteriormente si asi se nos permitiera por parte de los dueños del proyecto original; o sea del universo al que pertenece este proyecto.
+
+Para hacer un Fork: desde GitHub vamos al proyecto que queremos llevar a nuestro "code multiverse" y una vez alli en la parte superior derecha encontramos el boton de Fork, ademas de que podremos seguir el proyecto original y darle una estrella.
+
+una vez tengamos el Fork en nuestro repositorio podremos copiar el codigo o las llaves SSH para agregarlas a nuestro git (repositorio local)
+  l> $ git clone https://...
+  
+Cuando tengamos la copia de nuestro fork en nuestro repositorio local, podremos hacer modificaciones y commits de la manera natural como se hace en Git. al igual que hacer pull y push desde y hacia nuestro repositorio remoto. Cuando hagamos los push y tengamos commits por delante de lo que hay en el proyecto original, podremos solicitar PRs a los dueños del proyecto para que, si lo consideran, puedan hacer merge con nuestros cambios y evolucionar su proyecto.
+
+Como en todo PR los auditores o dueños del proyecto tendran que revisar mis cambios y decidir si los aprueban o no.
+
+  l> NOTA: Es importante tener en cuenta que cuando no somos colaboradores directos de un proyecto no tenemos acceso directo al repositorio original ni a sus cambios, por lo cual cada vez que haya un cambio tendremos que hacer nuestro propio fork y sobre este hacer las modificaciones o aportes.
+  
+  l> si fuera el caso, si tenemos en seguimiento  el repo sobre el cual queremos trabajar, GitHub nos notificará cuando hay modificaciones del proyecto original y nos dirá cuantos commits por detras está nuestro fork de su origen. podremos comparar los cambios (switching the base) y realizar commits para actualizar nuestro fork. Pero hay iuna forma de hacerlo desde nuestro repositorio local (Git)... =)
+  
+    l> Primero: copiamos la url o las llaves ssh del proyecto original.
+    l> desde Git en nuestro computador creamos un origen remoto
+      l> $ git remote add upstream https://...urlproyecto
+      l> $ git remote -v --> podremos ver nuestros medios remotos.
+      l> $ git pull uptream main --> para traernos la ultima versión del proyecto original
+      l> $ git commit -am "msj" --> para consolidar cambios en nuestro repositorio local
+      l> $ git push origin main --> para actualizar nuestro fork en nuestro repositorio remoto (GitHub)
+      
+el Upstream es un apuntador al reposotorio Maestro, con lo cual puedo clonar y fusionarlo con mi reposotorio local forkeado y subirlo a mi repositorio remoto.
+es parte de un flujo de actualización.
+
+pero ¿Cómo podremos hacer un PR desde nuestro Fork?
+
