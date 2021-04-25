@@ -104,5 +104,21 @@ Como en todo PR los auditores o dueños del proyecto tendran que revisar mis cam
 el Upstream es un apuntador al reposotorio Maestro, con lo cual puedo clonar y fusionarlo con mi reposotorio local forkeado y subirlo a mi repositorio remoto.
 es parte de un flujo de actualización.
 
-pero ¿Cómo podremos hacer un PR desde nuestro Fork?
+
+-----------------------------
+          .gitignore
+-----------------------------
+
+.gitignore 
+    l> es un archivo que nos permite decirle a Git o a GitHub que excluir cuando hacemos una actualización en nuestro repositorio. Esto se debe a que existe            información sensible que no es conveniente tener en un repositorio publico o en el que tendremos colaboradores que no deban interactuar o tener acceso a cierta información; o sensillamente no queremos alojar alli por espacio, o copmlejidad o capricho... no importa, lo que importa es lo que puede hace *.gitignore por nosotros!
+    
+    
+Para poder usarlo simplemente debemos ubicarnos en la carpeta principal de nuestro repositorio y crear un archivo que se llame ".gitignore" y alli añadir las exclusiones. como por ejemplo:
+
+  l> *.jpg
+  l>.DS_Store
+  l>contraseñaspersonales.txt
+  l>.psdw
+  
+  
 
