@@ -97,7 +97,7 @@ Como en todo PR los auditores o dueños del proyecto tendran que revisar mis cam
     l> desde Git en nuestro computador creamos un origen remoto
       l> $ git remote add upstream https://...urlproyecto
       l> $ git remote -v --> podremos ver nuestros medios remotos.
-      l> $ git pull uptream main --> para traernos la ultima versión del proyecto original
+      l> $ git pull upstream main --> para traernos la ultima versión del proyecto original
       l> $ git commit -am "msj" --> para consolidar cambios en nuestro repositorio local
       l> $ git push origin main --> para actualizar nuestro fork en nuestro repositorio remoto (GitHub)
       
@@ -121,4 +121,10 @@ Para poder usarlo simplemente debemos ubicarnos en la carpeta principal de nuest
   l>.psdw
   
   
+
+---------------------------
+ReadMe.md  ---> Mark Down
+---------------------------
+
+
 
