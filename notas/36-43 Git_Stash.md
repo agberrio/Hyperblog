@@ -26,16 +26,20 @@ Esto es útil, en casos en los que se daña nuestra rama pero los cambios no han
 
 Tambien cuando hemos avanzado en una rama pero necesitamos recuperar alguna información de otra rama para agregarla a los cambios actuales pero no queremos perder nuestro progreso, es alli donde *stash* brilla; pues podremos guardar nuestros cambios sin perderlos, volver a la rama de la cual queremos sacar información, agregarla a la rama principal y finalmente volver a agregar nuesto *stash* a los cambios para *commit*.
 
-
-
+Para guardar cambios de manera temporal:
 $ git stash
+$ git stash save "msj id del elemento" --> Para agregar un mensaje de identificacion del elemento guardado.
 
+Para ver la lista de los cambios stasheados:
 $ git stash list
 
-$ git stash pop
+Para restaurar el último de los cambios guardados en stash:
+$ git stash pop --> insertar en el *staging area*
 
+Eliminar los cambios mas recientes en el *stash*
 $ git stash drop
 
+Crear una rama con el estado de *stashed*
 $git stash branch [branch_name]
 
 
