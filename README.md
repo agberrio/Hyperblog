@@ -17,6 +17,7 @@ Un blog de prueba para el curso profesional de Git y GitHub
 * Cultivamos la lujuria hacia las buenas practicas (tao)
 * Trucos que nos enseña nuestro profesor! Freddier!
 * Los multiples colaboradores de un proyecto y como interactuan todos estos actores
+* Creado por el increible The Chimp 'o Team!
 
 Este readme.md es una breve reseña que solo intenta resumir lo mucho que podrás aprender!!!
 
